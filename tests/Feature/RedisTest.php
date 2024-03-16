@@ -108,7 +108,7 @@ class RedisTest extends TestCase
 
         $result = Redis::geosearch("sellers", new FromLonLat(106.821666, -6.175494), new ByRadius(5, "km"));
         self::assertEquals(["Toko A", "Toko B"], $result);
-        
+
     }
 
     public function testHyperLogLog()
@@ -183,6 +183,7 @@ class RedisTest extends TestCase
 
         self::assertNotNull($result);
         echo json_encode($result, JSON_PRETTY_PRINT);
+        
     }
 
 
